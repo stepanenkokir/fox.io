@@ -1,0 +1,20 @@
+{
+    "port": 5000,	
+    "startPositions":{
+	"x":1000,
+	"y":1000},
+    "gameWidth": 5000,
+    "gameHeight": 5000,
+    "adminPass": "steki211277",
+    "maxRadius": 100,
+    "minRadius": 2,
+    "maxTrees": 310, 
+    "minAn" : 0.3,   
+    "maxFoxes": 5,
+    "coeffTime":3,
+    "slowBase": 4.5,
+    "logChat": 0,
+    "networkUpdateFactor": 40,
+    "maxHeartbeatInterval": 5000
+}
+

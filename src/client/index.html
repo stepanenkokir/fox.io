@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <!-- Meta Properties -->
+    <meta charset="UTF-8">
+    <title>Fox.IO</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"> 
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/main.css" />
+    <!-- Audio -->
+    <audio id="split_cell" src="audio/split.mp3"></audio>
+    <audio id="spawn_cell" src="audio/spawn.mp3"></audio>
+</head>
+<body>
+    <div id="gameField">
+        <div id="status"><span class="title">Список лидеров</span></div>
+        <div class="chatbox" id="chatbox">
+            <ul id="chatList" class="chat-list"></ul>
+            <input id="chatInput" type="text" class="chat-input" placeholder="Chat here..." maxlength="35" />
+        </div>        
+        <canvas tabindex="1" id="cvs"></canvas>
+    </div>
+    <div id="startMenuList">
+        <div id="startMenu">
+            <p>Начать игру</p>
+            <input type="text" tabindex="0" autofocus placeholder="Введите Ваше имя" id="playerNameInput" maxlength="25" />
+            <b class="input-error">Только цифры и/или латинские буквы!</b>
+            <br />
+            <a onclick="document.getElementById('spawn_cell').play();"><button id="startButton">Старт</button></a>
+            <button id="spectateButton">Наблюдать</button>
+            <button id="settingsButton">Настройки</button>
+            <br />
+            <div id="settings">
+                <h3>Настройки</h3>
+                <ul>
+                    <label><input id="visBord" type="checkbox">Показать границу</label>
+                    <label><input id="showMass" type="checkbox">Показать других игроков</label>                    
+                </ul>
+            </div>
+            <div id="instructions">
+                <h3>Как играть</h3>
+                <ul>
+                    <li>Цель: Найти 5 лис (передатчиков) за минимальное время.</li>
+                    <li>Каждая лиса работает только одну минуту и четыре минуты молчит.</li>
+                    <li>Во время работы лисы, можно узнать направление (пеленг) в её сторону. Пересечение нескольких пеленгов определяет район нахождения лисы.</li>
+                    <li>Перемещение игрока: W-вверх,  A-влево,  S-вниз,  D-вправо.</li>
+                    <li>Мышь: поиск пеленга с максимальной амплитудой. Левая кнопка - сохранить пеленг.</li>                    
+                    <li>ВНИМАНИЕ. ВРЕМЯ В ИГРЕ УСКОРЕНО!</li>                    
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- JS -->
+    <script src="//code.jquery.com/jquery-2.2.0.min.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

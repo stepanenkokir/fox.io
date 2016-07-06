@@ -1,0 +1,11 @@
+---
+applications:
+- name: fox.io
+  memory: 512M
+  disk_quota: 1G
+  buildpack: nodejs_buildpack
+  host: fox.io
+  domain: stekir.net
+  timeout: 180
+  env:
+    NPM_CONFIG_PRODUCTION: false

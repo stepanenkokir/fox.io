@@ -1,0 +1,11 @@
+{
+  "name": "fox.io",
+  "description": "A fox-hunter game (pelengation)",
+  "scripts": {
+    "build": "gulp build",
+    "start": "gulp run",
+    "watch": "gulp watch",
+    "test": "gulp test"
+  },
+  "repository": "https://github.com/stekir/fox.io"
+}
